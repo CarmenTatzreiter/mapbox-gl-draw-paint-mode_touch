@@ -6,7 +6,6 @@ import "./icon/paint-brush.css";
 var PaintMode = {};
 
 PaintMode.onSetup = function () {
-  console.log("paint mode entered");
   var state = {};
   state.features = [];
   state.currentLine = null;
@@ -98,7 +97,6 @@ PaintMode.toDisplayFeatures = function (state, geojson, display) {
 PaintMode.onStop = function (state) {
   dragPan.enable(this);
   doubleClickZoom.enable(this);
-  console.log("paint mode left");
 };
 
 function isTouchDevice() {
